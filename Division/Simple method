@@ -1,0 +1,48 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,c,d;
+    float multi1=1,multi2=1;
+    float divi,divi1=1, divi2=1;
+    printf ("Enter full equation(with symbols):\nAs: X +Yi (without 'i')\n\n");
+    printf ("Enter the 1st equation : ");
+    scanf ("%d %d",&a,&b);
+    printf ("Enter the 2nd equation: ");
+    scanf ("%d %d",&c,&d);
+    multi1= (a*c)+((b*(d*-1))*-1);
+    multi2= (a*(d*-1))+(b*c);
+    divi= (c*c)+(d*d);
+    divi1= multi1/divi;
+    divi2= multi2/divi;
+
+    if (b>0)
+        printf ("The 1st equation (with 'i') = %d+%di\n",a,b);
+    else if (b<0)
+        printf ("The 1st equation (with 'i') = %d%di\n",a,b);
+    else
+        printf ("The 1st equation (with 'i') = %d\n",a);
+
+    if (d>0)
+        printf ("The 2nd equation (with 'i') = %d+%di\n",c,d);
+    else if (d<0)
+        printf ("The 2nd equation (with 'i') = %d%di\n",c,d);
+    else
+        printf ("The 2nd equation (with 'i') = %d\n",c);
+
+    printf ("\nWith division part:\n");
+    if (multi2>0)
+        printf ("The division of two complex equation = %.0f/%.0f+%.0f/%.0fi\n",multi1,divi,multi2,divi);
+    else if (multi2<0)
+        printf ("The division of two complex equation = %.0f/%.0f%.0f/%.0fi\n",multi1,divi,multi2,divi);
+    else
+        printf ("The division of two complex equation = %.0f/%.0f\n",multi1,divi);
+
+    printf ("\nWith fractional part:\n");
+    if (divi2>0)
+        printf ("The division of two complex equation = %.2f+%.2fi\n",divi1,divi2);
+    else if (divi2<0)
+        printf ("The division of two complex equation = %.2f%.2fi\n",divi1,divi2);
+    else
+        printf ("The division of two complex equation = %.2f\n",divi1);
+    return 0;
+}
