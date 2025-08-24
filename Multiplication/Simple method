@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,c,d;
+    int multi1=1,multi2=1;
+    printf ("Enter full equation(with symbols):\nAs: X +Yi (without 'i')\n\n");
+    printf ("Enter the 1st equation : ");
+    scanf ("%d %d",&a,&b);
+    printf ("Enter the 2nd equation: ");
+    scanf ("%d %d",&c,&d);
+    multi1= (a*c)+((b*d)*-1);
+    multi2= (a*d)+(b*c);
+    if (b>0)
+        printf ("The 1st equation (with 'i') = %d+%di\n",a,b);
+    else if (b<0)
+        printf ("The 1st equation (with 'i') = %d%di\n",a,b);
+    else
+        printf ("The 1st equation (with 'i') = %d\n",a);
+
+    if (d>0)
+        printf ("The 2nd equation (with 'i') = %d+%di\n",c,d);
+    else if (d<0)
+        printf ("The 2nd equation (with 'i') = %d%di\n",c,d);
+    else
+        printf ("The 2nd equation (with 'i') = %d\n",c);
+
+    if (multi2>0)
+        printf ("Multiplication of two complex equation is = %d+%di\n",multi1,multi2);
+    else if (multi2<0)
+        printf ("Multiplication of two complex equation is = %d%di\n",multi1,multi2);
+    else
+        printf ("Multiplication of two complex equation is = %d\n",multi1);
+    return 0;
+}
