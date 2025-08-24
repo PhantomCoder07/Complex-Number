@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,c,d;
+    int sub1=0,sub2=0;
+    printf ("Enter full equation(with symbols):\nAs: X +Yi (without 'i')\n\n");
+    printf ("Enter the 1st equation : ");
+    scanf ("%d %d",&a,&b);
+    printf ("Enter the 2nd equation: ");
+    scanf ("%d %d",&c,&d);
+    sub1=a-c;
+    sub2=b-d;
+    if (b>0)
+        printf ("The 1st equation (with 'i') = %d+%di\n",a,b);
+    else if (b<0)
+        printf ("The 1st equation (with 'i') = %d%di\n",a,b);
+    else
+        printf ("The 1st equation (with 'i') = %d\n",a);
+
+    if (d>0)
+        printf ("The 2nd equation (with 'i') = %d+%di\n",c,d);
+    else if (d<0)
+        printf ("The 2nd equation (with 'i') = %d%di\n",c,d);
+    else
+        printf ("The 1st equation (with 'i') = %d\n",c);
+
+    if (sub2>0)
+        printf ("\nThe subtraction of two complex equation = %d+%di\n",sub1,sub2);
+    else if (sub2<0)
+        printf ("\nThe subtraction of two complex equation = %d%di\n",sub1,sub2);
+    else
+        printf ("\nThe subtraction of two complex equation = %d\n",sub1);
+    return 0;
+}
